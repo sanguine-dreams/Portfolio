@@ -15,10 +15,11 @@ body {
 
 header {
     grid-area: 1 / 1 / 2 / 6;
-    background-color: aqua;
+ 
 }
 
 main {
+    margin: 4rem 2rem 0 2rem;
     grid-area: 2 / 1 / 12 / 6;
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -48,7 +49,12 @@ footer {
 
 .about-image {
     grid-area: 1 / 1 / 3 / 3;
+   
 
+}
+
+.about-image img {
+    border-radius: 50% 50% 0 0 ;
 }
 
 .about-text {
@@ -163,22 +169,23 @@ footer {
 
 
 nav {
-    /* margin: 1rem;
+    background-color: blue;
     text-align: center;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 99%;
-    position: fixed;
+    width: 100%;
     border-radius: 3rem;
     position: fixed;
     z-index: 1;
-    height: 3rem; */
+    height: 3rem;
 
 }
 
 
 nav a {
     text-decoration: none;
+    font-family: "groovy";
+    font-size: 200%;
+    padding: 1rem;
+    color: coral;
 
 }
 
@@ -196,20 +203,16 @@ nav a:active {}
 
 article {
     border: 3px;
-    border-color: black;
-    border-style: solid;
+   
 }
 
 section {
-    border: 3px;
-    border-color: black;
-    border-style: solid;
+   
 }
 
 div {
     border: 3px;
-    border-color: black;
-    border-style: solid;
+
 }
 
 p {
@@ -221,6 +224,7 @@ height: 110%;
 position: fixed;
 overflow: hidden;
 top: -4rem;
+z-index: -10;
 
 
 
@@ -233,7 +237,7 @@ top: -4rem;
     z-index: -10;
     animation-name: wave;
     animation-iteration-count: infinite;
-    animation-duration: 10s;
+    animation-duration: 180s;
     animation-direction: alternate;
     animation-timing-function: linear;
     background-repeat: repeat;
