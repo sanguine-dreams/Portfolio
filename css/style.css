@@ -12,6 +12,7 @@ body {
     grid-column-gap: 6px;
     grid-row-gap: 5px;
     margin-left: 0;
+    background-color: #FFCB90;
 }
 
 ::-webkit-scrollbar {
