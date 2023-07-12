@@ -36,7 +36,7 @@ nav {
 
 
 main {
-    margin: 4rem 2rem 0 2rem;
+    margin: 4rem 4rem 0 4rem;
     grid-area: 2 / 1 / 12 / 6;
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -120,6 +120,7 @@ cursor: url('/images/pointer.png'),auto;
 
 .about-text {
     grid-area: 1 / 3 / 3 / 6;
+    
 
 }
 
@@ -151,6 +152,9 @@ cursor: url('/images/pointer.png'),auto;
 
 .project1-text {
     grid-area: 1 / 1 / 4 / 4;
+    padding: 0;
+    margin: 0;
+    height: 0;
 
 }
 
@@ -190,6 +194,9 @@ cursor: url('/images/pointer.png'),auto;
 
 .project2-text {
     grid-area: 1 / 3 / 4 / 6;
+    padding: 0;
+    margin: 0;
+    height: 0;
 
 }
 
@@ -212,6 +219,9 @@ cursor: url('/images/pointer.png'),auto;
 
 .project3-text {
     grid-area: 1 / 1 / 4 / 4;
+    padding: 0;
+    margin: 0;
+    height: 0;
 
 }
 
@@ -222,6 +232,7 @@ cursor: url('/images/pointer.png'),auto;
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 6px;
     grid-row-gap: 5px;
+    height: fit-content;
 }
 
 .project4-preview {
@@ -244,6 +255,9 @@ cursor: url('/images/pointer.png'),auto;
 
 .project4-text {
     grid-area: 1 / 3 / 4 / 6;
+    padding: 0;
+    margin: 0;
+    height: 0;
 
 }
 
@@ -293,14 +307,12 @@ section {
     
 }
 
-div {
-    border: 3px;
-
-}
 
 p {
-    padding: 5rem;
+    padding-top: 25%;
     font-family: "groovy-text";
+    font-size: 200%;
+    color: #FF9600;
 }
 
 .retrobtn {
