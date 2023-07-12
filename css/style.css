@@ -53,6 +53,7 @@ main {
     grid-column-gap: 6px;
     grid-row-gap: 2rem;
     text-align: center;
+   
 
 }
 
@@ -105,16 +106,20 @@ footer {
 }
 
 .about-image {
-    grid-area: 1 / 1 / 3 / 3;
-
-
+    grid-area: 1 / 1 / 3 / 3; 
 }
 
 .about-image img {
-    border-radius: 50% 50% 0 0;
-    border-style:double;
+    height: 35rem;
+    background-image:url('/images/dp-background.svg') ;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 15rem 15rem 0 0;
+    border-style: double;
     border-width: 1rem;
     border-color: #FF9600;
+  
+   
 }
 
 .about-text {
@@ -262,6 +267,7 @@ section {
     border-radius: 2rem;
     background-color: #700900d2;
     padding: 2rem;
+    
 }
 
 div {
