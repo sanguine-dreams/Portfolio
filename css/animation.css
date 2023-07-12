@@ -20,7 +20,7 @@
   animation-timing-function: linear;
   background-repeat: repeat;
   background-size: cover;
-  background-image: url(/images/Improved_background.svg);
+  background-image: url('/images/Improved_background.svg');
 
 }
 
