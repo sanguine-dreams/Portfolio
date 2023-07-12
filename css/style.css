@@ -117,13 +117,13 @@ cursor: url('/images/pointer.png'),auto;
 
 .about-image img {
     height: 35rem;
-    background-image:url('/images/dp-background.svg') ;
+    background-image:url(/images/dp-background.svg) ;
     background-size: cover;
     background-position: center center;
     border-radius: 15rem 15rem 0 0;
     border-style: double;
     border-width: 1rem;
-    border-color: #FF9600;
+    border-color: #FFCB90;
   
    
 }
