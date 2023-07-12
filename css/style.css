@@ -72,6 +72,11 @@ footer {
 
 }
 
+footer img:hover {
+transform: scale(1.3);
+cursor: pointer;
+}
+
 #contact-text {
     grid-area: 1 / 1 / 2 / 2;
 }
@@ -249,6 +254,7 @@ nav a:visited {}
 /* mouse over link */
 nav a:hover {
     color: #FF3800;
+    cursor: pointer;
 }
 
 /* selected link */
@@ -284,7 +290,7 @@ p {
     width: 100%;
     height: 50px;
     font-size: 1.35rem;
-    cursor: crosshair;
+    cursor: pointer;
     border: 3px solid #FF9600;
     background: linear-gradient(to right, rgb(235, 228, 12) 50%, rgb(98, 4, 4) 0%);
     background-repeat: repeat;
