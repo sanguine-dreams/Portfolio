@@ -35,3 +35,89 @@
     width: 250%;
   }
 }
+
+h1 {
+   font-family: "groovy";
+  font-size: 3rem;
+  color: rgb(236, 236, 236);
+  text-shadow: 0px 0px #FF3800, 1px 1px #FF3800, 2px 2px #FF3800, 3px 3px #FF3800, 4px 4px #FF3800, 5px 5px #FF3800,
+  5px 5px #FF9600, 6px 6px #FF9600, 7px 7px #FF9600, 8px 8px #FF9600, 9px 9px #FF9600, 10px 10px #FF9600,
+  10px 10px #FFCB90, 11px 11px #FFCB90, 12px 12px #FFCB90, 13px 13px #FFCB90, 14px 14px #FFCB90, 15px 15px #FFCB90;
+  
+  -webkit-animation: text-shadow 1s linear infinite;
+  animation: text-shadow 2s ease infinite;
+}
+
+
+
+
+/* @keyframes text-shadow {
+
+  0% {
+    text-shadow: 0px 0px #FFCB90, 1px 1px #FFCB90, 2px 2px #FFCB90, 3px 3px #FFCB90, 4px 4px #FFCB90, 5px 5px #FFCB90,
+    5px 5px #FF9600, 6px 6px #FF9600, 7px 7px #FF9600, 8px 8px #FF9600, 9px 9px #FF9600, 10px 10px #FF9600,
+    10px 10px #FF3800, 11px 11px #FF3800, 12px 12px #FF3800, 13px 13px #FF3800, 14px 14px #FF3800, 15px 15px #FF3800;
+  }
+
+  20% {
+    text-shadow: 0px 0px #FF9600, 1px 1px #FF9600, 2px 2px #FF9600, 3px 3px #FF9600, 4px 4px #FF9600, 5px 5px #FF9600,
+    5px 5px #FF3800, 6px 6px #FF3800, 7px 7px #FF3800, 8px 8px #FF3800, 9px 9px #FF3800, 10px 10px #FF3800,
+    10px 10px #FFCB90, 11px 11px #FFCB90, 12px 12px #FFCB90, 13px 13px #FFCB90, 14px 14px #FFCB90, 15px 15px #FFCB90;
+  }
+
+  40% {
+    text-shadow: 0px 0px #FF3800, 1px 1px #FF3800, 2px 2px #FF3800, 3px 3px #FF3800, 4px 4px #FF3800, 5px 5px #FF3800,
+    5px 5px #FFCB90, 6px 6px #FFCB90, 7px 7px #FFCB90, 8px 8px #FFCB90, 9px 9px #FFCB90, 10px 10px #FFCB90,
+    10px 10px #FF9600, 11px 11px #FF9600, 12px 12px #FF9600, 13px 13px #FF9600, 14px 14px #FF9600, 15px 15px #FF9600;
+  }
+
+  60% {
+    text-shadow: 0px 0px #FFCB90, 1px 1px #FFCB90, 2px 2px #FFCB90, 3px 3px #FFCB90, 4px 4px #FFCB90, 5px 5px #FFCB90,
+    5px 5px #FF9600, 6px 6px #FF9600, 7px 7px #FF9600, 8px 8px #FF9600, 9px 9px #FF9600, 10px 10px #FF9600,
+    10px 10px #FF3800, 11px 11px #FF3800, 12px 12px #FF3800, 13px 13px #FF3800, 14px 14px #FF3800, 15px 15px #FF3800;
+   
+  }
+
+  80% {
+    text-shadow: 0px 0px #FF9600, 1px 1px #FF9600, 2px 2px #FF9600, 3px 3px #FF9600, 4px 4px #FF9600, 5px 5px #FF9600,
+    5px 5px #FF3800, 6px 6px #FF3800, 7px 7px #FF3800, 8px 8px #FF3800, 9px 9px #FF3800, 10px 10px #FF3800,
+    10px 10px #FFCB90, 11px 11px #FFCB90, 12px 12px #FFCB90, 13px 13px #FFCB90, 14px 14px #FFCB90, 15px 15px #FFCB90;
+  }
+
+  100% {
+    text-shadow: 0px 0px #FF3800, 1px 1px #FF3800, 2px 2px #FF3800, 3px 3px #FF3800, 4px 4px #FF3800, 5px 5px #FF3800,
+    5px 5px #FFCB90, 6px 6px #FFCB90, 7px 7px #FFCB90, 8px 8px #FFCB90, 9px 9px #FFCB90, 10px 10px #FFCB90,
+    10px 10px #FF9600, 11px 11px #FF9600, 12px 12px #FF9600, 13px 13px #FF9600, 14px 14px #FF9600, 15px 15px #FF9600;
+  }
+}
+ */
+
+/* @keyframes text-shadow {
+
+  from,
+  19.9% {
+    text-shadow: 0px 0px #FF3800, 1px 1px #FF3800, 2px 2px #FF3800, 3px 3px #FF3800, 4px 4px #FF3800, 5px 5px #FF3800, 5px 5px #700A00, 6px 6px #700A00, 7px 7px #700A00, 8px 8px #700A00, 9px 9px #700A00, 10px 10px #700A00, 10px 10px #FF9600, 11px 11px #FF9600, 12px 12px #FF9600, 13px 13px #FF9600, 14px 14px #FF9600, 15px 15px #FF9600, 15px 15px #F40000, 16px 16px #F40000, 17px 17px #F40000, 18px 18px #F40000, 19px 19px #F40000, 20px 20px #F40000, 20px 20px #FFCB90, 21px 21px #FFCB90, 22px 22px #FFCB90, 23px 23px #FFCB90, 24px 24px #FFCB90, 25px 25px #FFCB90, 25px 25px #FF3800; }
+
+    20%, 39.9% {
+      text-shadow: 0px 0px #FFCB90, 1px 1px #FFCB90, 2px 2px #FFCB90, 3px 3px #FFCB90, 4px 4px #FFCB90, 5px 5px #FFCB90, 5px 5px #FF3800, 6px 6px #FF3800, 7px 7px #FF3800, 8px 8px #FF3800, 9px 9px #FF3800, 10px 10px #FF3800, 10px 10px #700A00, 11px 11px #700A00, 12px 12px #700A00, 13px 13px #700A00, 14px 14px #700A00, 15px 15px #700A00, 15px 15px #FF9600, 16px 16px #FF9600, 17px 17px #FF9600, 18px 18px #FF9600, 19px 19px #FF9600, 20px 20px #FF9600, 20px 20px #F40000, 21px 21px #F40000, 22px 22px #F40000, 23px 23px #F40000, 24px 24px #F40000, 25px 25px #F40000, 25px 25px #FFCB90;
+    }
+
+    40%,
+    59.9% {
+      text-shadow: 0px 0px #F40000, 1px 1px #F40000, 2px 2px #F40000, 3px 3px #F40000, 4px 4px #F40000, 5px 5px #F40000, 5px 5px #FFCB90, 6px 6px #FFCB90, 7px 7px #FFCB90, 8px 8px #FFCB90, 9px 9px #FFCB90, 10px 10px #FFCB90, 10px 10px #FF3800, 11px 11px #FF3800, 12px 12px #FF3800, 13px 13px #FF3800, 14px 14px #FF3800, 15px 15px #FF3800, 15px 15px #700A00, 16px 16px #700A00, 17px 17px #700A00, 18px 18px #700A00, 19px 19px #700A00, 20px 20px #700A00, 20px 20px #FF9600, 21px 21px #FF9600, 22px 22px #FF9600, 23px 23px #FF9600, 24px 24px #FF9600, 25px 25px #FF9600, 25px 25px #F40000;
+    }
+
+    60%,
+    79.9% {
+      text-shadow: 0px 0px #FF9600, 1px 1px #FF9600, 2px 2px #FF9600, 3px 3px #FF9600, 4px 4px #FF9600, 5px 5px #FF9600, 5px 5px #F40000, 6px 6px #F40000, 7px 7px #F40000, 8px 8px #F40000, 9px 9px #F40000, 10px 10px #F40000, 10px 10px #FFCB90, 11px 11px #FFCB90, 12px 12px #FFCB90, 13px 13px #FFCB90, 14px 14px #FFCB90, 15px 15px #FFCB90, 15px 15px #FF3800, 16px 16px #FF3800, 17px 17px #FF3800, 18px 18px #FF3800, 19px 19px #FF3800, 20px 20px #FF3800, 20px 20px #700A00, 21px 21px #700A00, 22px 22px #700A00, 23px 23px #700A00, 24px 24px #700A00, 25px 25px #700A00, 25px 25px #FF9600; }
+
+    80%,
+    to {
+      text-shadow: 0px 0px #700A00, 1px 1px #700A00, 2px 2px #700A00, 3px 3px #700A00, 4px 4px #700A00, 5px 5px #700A00, 5px 5px #FF9600, 6px 6px #FF9600, 7px 7px #FF9600, 8px 8px #FF9600, 9px 9px #FF9600, 10px 10px #FF9600, 10px 10px #F40000, 11px 11px #F40000, 12px 12px #F40000, 13px 13px #F40000, 14px 14px #F40000, 15px 15px #F40000, 15px 15px #FFCB90, 16px 16px #FFCB90, 17px 17px #FFCB90, 18px 18px #FFCB90, 19px 19px #FFCB90, 20px 20px #FFCB90, 20px 20px #FF3800, 21px 21px #FF3800, 22px 22px #FF3800, 23px 23px #FF3800, 24px 24px #FF3800, 25px 25px #FF3800;
+    }
+} */
+
+/* html {
+    color: #FF3800, #700A00, #FF9600, #FFCB90;
+            ORANGE , BROWN, GOLD, BEIGE
+} */

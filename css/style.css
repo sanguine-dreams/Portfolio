@@ -126,22 +126,26 @@ cursor: url('/images/pointer.png'),auto;
 
 #project1 {
     grid-area: 3 / 1 / 5 / 6;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 6px;
-    grid-row-gap: 5px;
+
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.project1-preview {
+.project1-preview img {
+    height: 20rem;
+    margin: 1rem;
+    padding: 0 2rem;
+
+}
+
+.project1-preview { 
     grid-area: 1 / 4 / 3 / 6;
-    border-radius:5rem 0;
+    border-radius:4rem 0;
     border-style: double;
-    border-width: 1rem;
+    border-width: 0.5rem;
     border-color: #FF9600;
     overflow: hidden;
     cursor: url('/images/pointer.png'),auto;
-    
 
 }
 
@@ -152,7 +156,7 @@ cursor: url('/images/pointer.png'),auto;
 
 .project1-text {
     grid-area: 1 / 1 / 4 / 4;
-    padding: 0;
+    padding: 2rem;
     margin: 0;
     height: 0;
 
@@ -232,11 +236,10 @@ cursor: url('/images/pointer.png'),auto;
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 6px;
     grid-row-gap: 5px;
-    height: fit-content;
+    
 }
 
 .project4-preview {
-    grid-area: 1 / 1 / 3 / 3;
     grid-area: 1 / 1 / 3 / 3;
     border-radius:0 5rem;
     border-style: double;
@@ -309,9 +312,8 @@ section {
 
 
 p {
-    padding-top: 25%;
     font-family: "groovy-text";
-    font-size: 200%;
+    font-size: 1em;
     color: #FF9600;
 }
 
@@ -325,10 +327,13 @@ p {
     background-repeat: repeat;
     background-size: 200%;
     background-position: 100% 0;
-    box-shadow: 0.4rem 0.4rem 0 #FF9600;
+    box-shadow: 0.4rem 0.2rem 0 #FF9600;
     font-family: "groovy-text";
     color: #FF9600;
+   
 }
+
+
 
 /* html {
     color: #FF3800, #700A00, #FF9600, #FFCB90;
