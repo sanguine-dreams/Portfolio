@@ -1,22 +1,24 @@
 html {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
     cursor: url(/images/cursor.png), auto;
 }
 
 body {
     margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(12, auto);
-    grid-column-gap: 6px;
     grid-row-gap: 5px;
-    margin-left: 0;
     background-color: #FFCB90;
 }
 
+.body {
+    width: inherit;
+}
 
 ::-webkit-scrollbar {
     display: none;
@@ -38,11 +40,11 @@ nav {
 
 
 main {
+    width: 100%;
     grid-area: 2 / 1 / 12 / 6;
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(12, auto);
-    grid-column-gap: 6px;
     grid-row-gap: 2rem;
     text-align: center;
 
@@ -56,11 +58,11 @@ footer {
     margin: 1rem 2rem 0 2rem;
     padding: 2rem;
     font-family: "groovy";
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: auto;
-    grid-column-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     color: #700A00;
+    
 
 }
 
@@ -97,8 +99,8 @@ footer img:hover {
     padding: 4rem 2rem 2rem 2rem;
     grid-area: 1 / 1 / 3 / 6;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-evenly;
+
     border-radius: 0 0 50%/10rem 0;
     background-color: #700A00;
 }
@@ -122,7 +124,7 @@ footer img:hover {
 
 .about-text {
     grid-area: 1 / 3 / 3 / 6;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -131,9 +133,12 @@ footer img:hover {
 
 #project1 {
     grid-area: 3 / 1 / 5 / 6;
-
     display: flex;
     justify-content: space-evenly;
+    border-radius: 60% 0 0 0;
+    background-color: #700A00;
+    flex-wrap: wrap-reverse;
+
 }
 
 .project1-preview img {
@@ -144,7 +149,8 @@ footer img:hover {
 }
 
 .project1-preview {
-    grid-area: 1 / 4 / 3 / 6;
+    height: 25rem;
+    width: 25rem;
     border-radius: 4rem 0;
     border-style: double;
     border-width: 0.5rem;
@@ -154,101 +160,106 @@ footer img:hover {
 
 }
 
-.project1-github {
-    grid-area: 3 / 4 / 4 / 6;
-
-}
-
 .project1-text {
-    grid-area: 1 / 1 / 4 / 4;
-    padding: 2rem;
-    margin: 0;
-    height: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 #project2 {
     grid-area: 5 / 1 / 7 / 6;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 6px;
-    grid-row-gap: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 0 0 0 60%;
+    background-color: #700A00;
+    flex-wrap: wrap-reverse;
+
+    
+}
+
+
+.project2-preview {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 0 5rem;
+    border-style: double;
+    border-width: 0.5rem;
+    border-color: #FF9600;
+    overflow: hidden;
+    cursor: url('/images/pointer.png'), auto;
+
+}
+
+
+.project2-text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.project2-preview img {
+    height: 20rem;
+    margin: 1rem;
+    padding: 0 2rem;
+
 }
 
 #project3 {
     grid-area: 7 / 1 / 9 / 6;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 6px;
-    grid-row-gap: 5px;
-}
-
-.project2-preview {
-    grid-area: 1 / 1 / 3 / 3;
-    border-radius: 0 5rem;
-    border-style: double;
-    border-width: 1rem;
-    border-color: #FF9600;
-    overflow: hidden;
-    cursor: url('/images/pointer.png'), auto;
-
-}
-
-.project2-github {
-    grid-area: 3 / 1 / 4 / 3;
-
-}
-
-.project2-text {
-    grid-area: 1 / 3 / 4 / 6;
-    padding: 0;
-    margin: 0;
-    height: 0;
-
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 0 60% 0 0;
+    background-color: #700A00;
+    flex-wrap: wrap;
 }
 
 
 .project3-preview {
-    grid-area: 1 / 4 / 3 / 6;
+    height: 25rem;
+    width: 25rem;
     border-radius: 5rem 0;
     border-style: double;
-    border-width: 1rem;
+    border-width: 0.5rem;
     border-color: #FF9600;
     overflow: hidden;
     cursor: url('/images/pointer.png'), auto;
 
 }
 
-.project3-github {
-    grid-area: 3 / 4 / 4 / 6;
-
+.project3-preview img {
+    height: 20rem;
+    margin: 1rem;
+    padding: 0 2rem;
 }
 
 .project3-text {
-    grid-area: 1 / 1 / 4 / 4;
-    padding: 0;
-    margin: 0;
-    height: 0;
-
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #project4 {
+    padding-bottom: 4rem;
     grid-area: 9 / 1 / 11 / 6;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 6px;
-    grid-row-gap: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 0 0 50% 50%/10rem;
+    background-color: #700A00;
+    flex-wrap: wrap;
 
 }
 
 .project4-preview {
-    grid-area: 1 / 1 / 3 / 3;
+    height: 25rem;
+    width: 25rem;
     border-radius: 0 5rem;
     border-style: double;
-    border-width: 1rem;
+    border-width: 0.5rem;
     border-color: #FF9600;
     overflow: hidden;
     cursor: url('/images/pointer.png'), auto;
@@ -256,17 +267,17 @@ footer img:hover {
 
 }
 
-.project4-github {
-    grid-area: 3 / 1 / 4 / 3;
-
+.project4-text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.project4-text {
-    grid-area: 1 / 3 / 4 / 6;
-    padding: 0;
-    margin: 0;
-    height: 0;
-
+.project4-preview img {
+    height: 20rem;
+    margin: 1rem;
+    padding: 0 2rem;
 }
 
 #inspo {
@@ -299,87 +310,14 @@ nav a:hover {
 /* selected link */
 nav a:active {}
 
-
-article {
-    border-radius: 2rem;
-    background-color: #700900d2;
-    padding: 2rem;
-
-
-}
-
-section {
-    border-radius: 2rem;
-    background-color: #700900d2;
-    padding: 2rem;
-
-}
-
-
 p {
     font-family: "groovy-text";
     font-size: 1em;
     color: #FF9600;
 }
 
-h1 span {
-    transform-origin: bottom;
-    font-size: 26px;
-    height: 300px;
-    width: 50px;
-    left: 50%;
-    top: 50%;
-
-}
-
-.c1 {
-    transform: rotate(6deg);
-
-}
-
-.c2 {
-    transform: rotate(12deg);
-
-}
-
-.c3 {
-    transform: rotate(18deg);
-
-}
-
-.c4 {
-    transform: rotate(24deg);
-
-}
-
-.c5 {
-    transform: rotate(30deg);
-
-}
-
-.c6 {
-    transform: rotate(36deg);
-
-}
-
-.c7 {
-    transform: rotate(43deg);
-
-}
-
-.c8 {
-    transform: rotate(48deg);
-
-}
-
-.c9 {
-    transform: rotate(54deg);
-
-}
-
-.c10 {
-    transform: rotate(60deg);
-
+section {
+    padding: 2rem 0 2rem 0;
 }
 
 .retrobtn {
