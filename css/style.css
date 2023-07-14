@@ -142,9 +142,8 @@ footer img:hover {
 }
 
 .project1-preview img {
-    height: 20rem;
-    margin: 1rem;
-    padding: 0 2rem;
+    height: 22rem;
+    
 
 }
 
@@ -153,7 +152,7 @@ footer img:hover {
     width: 25rem;
     border-radius: 4rem 0;
     border-style: double;
-    border-width: 0.5rem;
+    border-width: 1rem;
     border-color: #FF9600;
     overflow: hidden;
     cursor: url('/images/pointer.png'), auto;
@@ -181,11 +180,13 @@ footer img:hover {
 
 
 .project2-preview {
+    background-color: #FFCB90;
+    background-clip: content-box;
     height: 25rem;
     width: 25rem;
     border-radius: 0 5rem;
     border-style: double;
-    border-width: 0.5rem;
+    border-width: 1rem;
     border-color: #FF9600;
     overflow: hidden;
     cursor: url('/images/pointer.png'), auto;
@@ -205,6 +206,7 @@ footer img:hover {
     height: 20rem;
     margin: 1rem;
     padding: 0 2rem;
+ 
 
 }
 
@@ -231,9 +233,8 @@ footer img:hover {
 }
 
 .project3-preview img {
-    height: 20rem;
-    margin: 1rem;
-    padding: 0 2rem;
+    height: 22rem;
+    
 }
 
 .project3-text {
