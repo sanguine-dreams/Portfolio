@@ -36,14 +36,16 @@
   }
 }
 
-h1 {
-   font-family: "groovy";
+.about-text h1 {
+
+  text-align:center;
+  font-family: "groovy";
   font-size: 3rem;
   color: rgb(236, 236, 236);
   text-shadow: 0px 0px #FF3800, 1px 1px #FF3800, 2px 2px #FF3800, 3px 3px #FF3800, 4px 4px #FF3800, 5px 5px #FF3800,
-  5px 5px #FF9600, 6px 6px #FF9600, 7px 7px #FF9600, 8px 8px #FF9600, 9px 9px #FF9600, 10px 10px #FF9600,
-  10px 10px #FFCB90, 11px 11px #FFCB90, 12px 12px #FFCB90, 13px 13px #FFCB90, 14px 14px #FFCB90, 15px 15px #FFCB90;
-  
+    5px 5px #FF9600, 6px 6px #FF9600, 7px 7px #FF9600, 8px 8px #FF9600, 9px 9px #FF9600, 10px 10px #FF9600,
+    10px 10px #FFCB90, 11px 11px #FFCB90, 12px 12px #FFCB90, 13px 13px #FFCB90, 14px 14px #FFCB90, 15px 15px #FFCB90;
+
   -webkit-animation: text-shadow 1s linear infinite;
   animation: text-shadow 2s ease infinite;
 }

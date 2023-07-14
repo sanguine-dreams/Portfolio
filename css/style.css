@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    margin-top: 0;
     width: 100%;
     height: 100%;
     display: grid;
@@ -15,6 +16,7 @@ body {
     margin-left: 0;
     background-color: #FFCB90;
 }
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -36,7 +38,6 @@ nav {
 
 
 main {
-    margin: 4rem 4rem 0 4rem;
     grid-area: 2 / 1 / 12 / 6;
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -93,12 +94,13 @@ footer img:hover {
 
 
 #about {
+    padding: 4rem 2rem 2rem 2rem;
     grid-area: 1 / 1 / 3 / 6;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-column-gap: 6px;
-    grid-row-gap: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 0 0 50%/10rem 0;
+    background-color: #700A00;
 }
 
 .about-image {
@@ -120,9 +122,12 @@ footer img:hover {
 
 .about-text {
     grid-area: 1 / 3 / 3 / 6;
-
-
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 #project1 {
     grid-area: 3 / 1 / 5 / 6;
@@ -391,12 +396,6 @@ h1 span {
     font-family: "groovy-text";
     color: #FF9600;
 
-}
-
-.test {
-    height: 200px;
-    width: 200px;
-    background-color: aqua;
 }
 
 /* html {
