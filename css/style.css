@@ -1,11 +1,11 @@
 html {
     width: 100%;
     height: 100%;
-    cursor: url(/images/cursor.png),auto;
+    cursor: url(/images/cursor.png), auto;
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(5, auto);
@@ -44,7 +44,7 @@ main {
     grid-column-gap: 6px;
     grid-row-gap: 2rem;
     text-align: center;
-   
+
 
 }
 
@@ -64,8 +64,8 @@ footer {
 }
 
 footer img:hover {
-transform: scale(1.3);
-cursor: url('/images/pointer.png'),auto;
+    transform: scale(1.3);
+    cursor: url('/images/pointer.png'), auto;
 }
 
 #contact-text {
@@ -87,7 +87,7 @@ cursor: url('/images/pointer.png'),auto;
 #cv {
     grid-area: 1 / 4 / 2 / 5;
     height: 4rem;
-   
+
 
 }
 
@@ -102,7 +102,7 @@ cursor: url('/images/pointer.png'),auto;
 }
 
 .about-image {
-    grid-area: 1 / 1 / 3 / 3; 
+    grid-area: 1 / 1 / 3 / 3;
 }
 
 .about-image img {
@@ -114,13 +114,13 @@ cursor: url('/images/pointer.png'),auto;
     border-style: double;
     border-width: 1rem;
     border-color: #FFCB90;
-  
-   
+
+
 }
 
 .about-text {
     grid-area: 1 / 3 / 3 / 6;
-    
+
 
 }
 
@@ -138,14 +138,14 @@ cursor: url('/images/pointer.png'),auto;
 
 }
 
-.project1-preview { 
+.project1-preview {
     grid-area: 1 / 4 / 3 / 6;
-    border-radius:4rem 0;
+    border-radius: 4rem 0;
     border-style: double;
     border-width: 0.5rem;
     border-color: #FF9600;
     overflow: hidden;
-    cursor: url('/images/pointer.png'),auto;
+    cursor: url('/images/pointer.png'), auto;
 
 }
 
@@ -182,12 +182,12 @@ cursor: url('/images/pointer.png'),auto;
 
 .project2-preview {
     grid-area: 1 / 1 / 3 / 3;
-    border-radius:0 5rem;
+    border-radius: 0 5rem;
     border-style: double;
     border-width: 1rem;
     border-color: #FF9600;
     overflow: hidden;
-    cursor: url('/images/pointer.png'),auto;
+    cursor: url('/images/pointer.png'), auto;
 
 }
 
@@ -207,12 +207,12 @@ cursor: url('/images/pointer.png'),auto;
 
 .project3-preview {
     grid-area: 1 / 4 / 3 / 6;
-    border-radius:5rem 0;
+    border-radius: 5rem 0;
     border-style: double;
     border-width: 1rem;
     border-color: #FF9600;
     overflow: hidden;
-    cursor: url('/images/pointer.png'),auto;
+    cursor: url('/images/pointer.png'), auto;
 
 }
 
@@ -236,17 +236,17 @@ cursor: url('/images/pointer.png'),auto;
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 6px;
     grid-row-gap: 5px;
-    
+
 }
 
 .project4-preview {
     grid-area: 1 / 1 / 3 / 3;
-    border-radius:0 5rem;
+    border-radius: 0 5rem;
     border-style: double;
     border-width: 1rem;
     border-color: #FF9600;
     overflow: hidden;
-    cursor: url('/images/pointer.png'),auto;
+    cursor: url('/images/pointer.png'), auto;
 
 
 }
@@ -288,7 +288,7 @@ nav a:visited {}
 /* mouse over link */
 nav a:hover {
     color: #FF3800;
-    cursor: url('/images/pointer.png'),auto;
+    cursor: url('/images/pointer.png'), auto;
 }
 
 /* selected link */
@@ -307,7 +307,7 @@ section {
     border-radius: 2rem;
     background-color: #700900d2;
     padding: 2rem;
-    
+
 }
 
 
@@ -317,11 +317,71 @@ p {
     color: #FF9600;
 }
 
+h1 span {
+    transform-origin: bottom;
+    font-size: 26px;
+    height: 300px;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+
+}
+
+.c1 {
+    transform: rotate(6deg);
+
+}
+
+.c2 {
+    transform: rotate(12deg);
+
+}
+
+.c3 {
+    transform: rotate(18deg);
+
+}
+
+.c4 {
+    transform: rotate(24deg);
+
+}
+
+.c5 {
+    transform: rotate(30deg);
+
+}
+
+.c6 {
+    transform: rotate(36deg);
+
+}
+
+.c7 {
+    transform: rotate(43deg);
+
+}
+
+.c8 {
+    transform: rotate(48deg);
+
+}
+
+.c9 {
+    transform: rotate(54deg);
+
+}
+
+.c10 {
+    transform: rotate(60deg);
+
+}
+
 .retrobtn {
     width: 100%;
     height: 50px;
     font-size: 1.35rem;
-    cursor: url('/images/pointer.png'),auto;
+    cursor: url('/images/pointer.png'), auto;
     border: 3px solid #FF9600;
     background: linear-gradient(to right, rgb(235, 228, 12) 50%, rgb(98, 4, 4) 0%);
     background-repeat: repeat;
@@ -330,10 +390,14 @@ p {
     box-shadow: 0.4rem 0.2rem 0 #FF9600;
     font-family: "groovy-text";
     color: #FF9600;
-   
+
 }
 
-
+.test {
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
 
 /* html {
     color: #FF3800, #700A00, #FF9600, #FFCB90;

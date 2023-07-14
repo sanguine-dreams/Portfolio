@@ -12,6 +12,7 @@
             font-family: "groovy-text";
             src: url('Sunday Vibes Font by Keithzo.otf') format('truetype');
         }
+
         @font-face {
             font-family: "mango-groovy";
             src: url('Mango Groovy  Outline.ttf') format('truetype');
@@ -19,6 +20,9 @@
     </style>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/animation.css" rel="stylesheet">
+    <link href="css/Disco.css" rel="stylesheet">
+    <script src="js/Scripts.js"></script>
+
     <!-- Open Graph Protocol  -->
     <meta property="og:title" content="" />
     <meta property="og:type" content="" />
@@ -43,128 +47,177 @@
 
 <body>
 
-    <div class="wavy-wrapper">
-        <div class="wavy"></div>
 
+    <div class="disco" id="hide">
+        <div class="ceiling"></div>
+        <div class="background"></div>
+        <div class="wrapper">
+            <div class="wrapper-string">
+                <div class="string">
+                    
+                </div>
+            </div>
+            <button id="invis" onclick="myFunction()">
+            
+                <div class="ball">
+
+                </div>
+         
+
+            </button>
+                
+            
+        </div>
+    </div>
+    
+   
+
+    <div class="body" id="myDIV" style="display: none;">
+        <div class="wavy-wrapper">
+            <div class="wavy"></div>
+
+        </div>
+
+        <nav>
+            <a href="#about" id="nav1">Welcome</a>
+            <a href="#project1" id="nav2">Projects</a>
+            <a href="#contact-text" id="nav4">Contact</a>
+        </nav>
+
+
+        <main>
+
+            <article id="about">
+                <div class="about-image">
+                    <img src="images/dp2.png" id="dp">
+                </div>
+                <div class="about-text">
+                    <h1>Welcome! You're at Sarah's Portfolio! I am a Front-End Developer. <br> I enjoy bringing creative
+                        ideas to life.</h1>
+                </div>
+            </article>
+
+            <section id="project1">
+                <div class="project1-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio aspernatur dignissimos odit
+                        inventore? Veniam culpa provident ducimus, voluptas eum amet similique corporis reprehenderit
+                        nulla
+                        eos quasi magni suscipit deleniti.</p>
+                </div>
+                <div class="project1-preview">
+                    <a href="https://sanguine-dreams.github.io/LuckyShrub/" target="_blank">
+                        <img src="images/luckyshrub.png">
+                    </a>
+                    <a href="https://github.com/sanguine-dreams/LuckyShrub" target="_blank">
+                        <button class="retrobtn">Github Repo</button>
+                    </a>
+
+                </div>
+
+
+            </section>
+
+            <section id="project2">
+                <div class="project2-preview">
+                    <a href="https://sanguine-dreams.github.io/Umniah/" target="_blank">
+                        <img src="images/umniah.svg">
+                    </a>
+                    <a href="https://github.com/sanguine-dreams/Umniah" target="_blank">
+                        <button class="retrobtn">Github Repo</button>
+                    </a>
+
+                </div>
+
+                <div class="project2-text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni veritatis accusantium illo quae,
+                        molestias nesciunt sequi! Architecto voluptatem, atque ipsum reprehenderit quo in laborum
+                        excepturi
+                        aliquid repellendus magni dolorem? Assumenda!</p>
+                </div>
+            </section>
+
+            <section id="project3">
+                <div class="project3-preview">
+                    <a target="_blank">
+                        <img src="https://picsum.photos/500">
+                    </a>
+                    <button class="retrobtn">Github Repo</button>
+                </div>
+                <div class="project3-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sapiente beatae suscipit quos
+                        provident?
+                        Culpa quisquam libero nulla corrupti beatae dolores quaerat, omnis voluptatum voluptates qui
+                        natus
+                        tempore nobis illo.</p>
+                </div>
+            </section>
+
+            <section id="project4">
+                <div class="project4-preview">
+                    <a target="_blank">
+                        <img src="https://picsum.photos/500">
+                    </a>
+                    <button class="retrobtn">Github Repo</button>
+                </div>
+
+                <div class="project4-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate ipsum architecto,
+                        debitis
+                        tempore exercitationem, perspiciatis aut quos distinctio earum quibusdam esse nam impedit dicta
+                        beatae eveniet quam asperiores. Unde!</p>
+                </div>
+            </section>
+
+            <article id="inspo">
+
+                <h1>
+                    <span class="c1">H</span>
+                    <span class="c2">E</span>
+                    <span class="c3">L</span>
+                    <span class="c4">L</span>
+                    <span class="c5">0</span>
+                    <span class="c6">W</span>
+                    <span class="c7">0</span>
+                    <span class="c8">R</span>
+                    <span class="c9">L</span>
+                    <span class="c10">D</span>
+                </h1>
+
+                <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://lottie.host/4f5a22ff-7df6-4cd5-b62d-78bf29befb34/wI0YzT9VhZ.json" background="Transparent" speed="1" 
+                style="width: 300px; height: 300px" direction="1" mode="normal" loop hover></lottie-player> -->
+            </article>
+
+        </main>
+
+
+        <footer>
+
+            <h1 id="contact-text">
+                Like what you see? Contact me!
+            </h1>
+
+            <a href="https://www.linkedin.com/in/sara-0-dhahir/" target="_blank">
+                <img src="images/linkedin.svg" id="linkedin">
+            </a>
+
+            <a href="mailto:sara0dhahir.com?subject=Mail from Portfolio!" target="_blank">
+                <img src="images/gmail.svg" id="gmail">
+            </a>
+
+
+
+            <a href="Sara_Dhahir_2023.pdf" target="_blank">
+                <img src="images/cv.svg" id="cv">
+            </a>
+
+
+
+        </footer>
     </div>
 
-    <nav>
-        <a href="#about" id="nav1">Welcome</a>
-        <a href="#project1" id="nav2">Projects</a>
-        <a href="#contact-text" id="nav4">Contact</a>
-    </nav>
 
-
-    <main>
-
-        <article id="about">
-            <div class="about-image">
-                <img src="images/dp2.png" id="dp">
-            </div>
-            <div class="about-text">
-                <h1>Welcome! You're at Sarah's Portfolio! I am a Front-End Developer. <br> I enjoy bringing creative
-                    ideas to life.</h1>
-            </div>
-        </article>
-
-        <section id="project1">
-            <div class="project1-text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio aspernatur dignissimos odit
-                    inventore? Veniam culpa provident ducimus, voluptas eum amet similique corporis reprehenderit nulla
-                    eos quasi magni suscipit deleniti.</p>
-            </div>
-            <div class="project1-preview">
-                <a href="https://sanguine-dreams.github.io/LuckyShrub/" target="_blank">
-                    <img src="images/luckyshrub.png">
-                </a>
-                <a href="https://github.com/sanguine-dreams/LuckyShrub" target="_blank">
-                    <button class="retrobtn">Github Repo</button>
-                </a>
-
-            </div>
-
-
-        </section>
-
-        <section id="project2">
-            <div class="project2-preview">
-                <a href="https://sanguine-dreams.github.io/Umniah/" target="_blank">
-                    <img src="images/umniah.svg">
-                </a>
-                <a href="https://github.com/sanguine-dreams/Umniah" target="_blank">
-                    <button class="retrobtn">Github Repo</button>
-                </a>
-                
-            </div>
-
-            <div class="project2-text">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni veritatis accusantium illo quae,
-                    molestias nesciunt sequi! Architecto voluptatem, atque ipsum reprehenderit quo in laborum excepturi
-                    aliquid repellendus magni dolorem? Assumenda!</p>
-            </div>
-        </section>
-
-        <section id="project3">
-            <div class="project3-preview">
-                <a target="_blank">
-                    <img src="https://picsum.photos/500">
-                </a>
-                <button class="retrobtn">Github Repo</button>
-            </div>
-            <div class="project3-text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sapiente beatae suscipit quos provident?
-                    Culpa quisquam libero nulla corrupti beatae dolores quaerat, omnis voluptatum voluptates qui natus
-                    tempore nobis illo.</p>
-            </div>
-        </section>
-
-        <section id="project4">
-            <div class="project4-preview">
-                <a target="_blank">
-                    <img src="https://picsum.photos/500">
-                </a>
-                <button class="retrobtn">Github Repo</button>
-            </div>
-
-            <div class="project4-text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate ipsum architecto, debitis
-                    tempore exercitationem, perspiciatis aut quos distinctio earum quibusdam esse nam impedit dicta
-                    beatae eveniet quam asperiores. Unde!</p>
-            </div>
-        </section>
-
-        <article id="inspo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed provident voluptas hic, at natus
-                vero ad aliquam beatae quod ab eaque eum nobis cupiditate, cumque laborum omnis est id.</p>
-        </article>
-
-    </main>
-
-
-    <footer>
-
-        <h1 id="contact-text">
-            Like what you see? Contact me!
-        </h1>
-
-        <a href="https://www.linkedin.com/in/sara-0-dhahir/" target="_blank">
-            <img src="images/linkedin.svg" id="linkedin">
-        </a>
-
-        <a href="mailto:sara0dhahir.com?subject=Mail from Portfolio!" target="_blank">
-            <img src="images/gmail.svg" id="gmail">
-        </a>
-
-
-
-        <a href="Sara_Dhahir_2023.pdf" target="_blank">
-            <img src="images/cv.svg" id="cv">
-        </a>
-
-
-
-    </footer>
-    <script src="Scripts.js"></script>
+    
 </body>
 
 </html>
