@@ -147,7 +147,7 @@ footer img:hover {
     align-items: center;
 }
 
-.projects img {
+#skills img {
     width: 3rem;
 }
 
@@ -158,7 +158,7 @@ footer img:hover {
 }
 
 #project1 {
-    
+    text-align: center;
     grid-area: 5 / 1 / 7 / 6;
     display: flex;
     justify-content: space-evenly;
@@ -186,12 +186,24 @@ footer img:hover {
 
 }
 
+@media only screen and (max-width: 900px) {
+
+    .project1-preview, .project2-preview, .project3-preview, .project4-preview {
+        height: 20rem;
+        width: 20rem;
+       
+    }
+
+}
+
 .project1-text {
     width: 50%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2rem 0 2rem 0;
+
 
 }
 
@@ -230,6 +242,7 @@ footer img:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2rem 0 5rem 0;
 
 }
 
@@ -257,7 +270,7 @@ footer img:hover {
     width: 25rem;
     border-radius: 0 5rem;
     border-style: double;
-    border-width: 0.5rem;
+    border-width: 1rem;
     border-color: #FF9600;
     overflow: hidden;
     cursor: url('/images/pointer.png'), auto;
@@ -275,6 +288,8 @@ footer img:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2rem 0 2rem 0;
+    
 }
 
 #project4 {
@@ -290,11 +305,13 @@ footer img:hover {
 }
 
 .project4-preview {
+    background-color: #FFCB90;
+    background-clip: content-box;
     height: 25rem;
     width: 25rem;
     border-radius: 0 5rem;
     border-style: double;
-    border-width: 0.5rem;
+    border-width: 1rem;
     border-color: #FF9600;
     overflow: hidden;
     cursor: url('/images/pointer.png'), auto;
@@ -308,6 +325,7 @@ footer img:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2rem 0 4rem 0;
 }
 
 .project4-preview img {
