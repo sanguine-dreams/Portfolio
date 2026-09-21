@@ -1,0 +1,290 @@
+<html lang="en">
+
+<head>
+    <!-- Links -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/Disco.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Analog/digital type: VT323 (digital LCD/terminal) for body copy,
+         Rubik Glitch (broken analog signal) for headings/branding -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="css/LavaLamp.css" rel="stylesheet">
+    <!-- EXPERIMENTAL (test only) — migrates the lava/CRT look onto the main
+         site. To revert: delete this line and delete css/CrtLavaTheme.css. -->
+    <link href="css/CrtLavaTheme.css" rel="stylesheet">
+    <script src="js/Scripts.js"></script>
+
+    <!-- Open Graph Protocol  -->
+    <meta property="og:title" content="Sara Dhahir - Front-End Developer Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="images/dp2.png" />
+    <!-- SEO TAGS -->
+    <meta name="description" content="Sara Dhahir's portfolio - a front-end developer bringing creative ideas to life." />
+    <meta name="author" content="Sara Dhahir">
+    <meta name="language" content="english">
+    <meta name="googlebot" content="notranslate" />
+    <meta charset="UTF-8">
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="HandheldFriendly" content="true" />
+
+    <title>Sara Dhahir</title>
+
+</head>
+
+
+<body>
+
+
+    <!--
+        Intro screen: two options below, only one uncommented at a time
+        (both use id="hide"). On click, js/Scripts.js plays a TV glitch
+        transition on #hide, then turns it into the site's fullscreen
+        background (class "tv-bg") instead of hiding it, and reveals
+        #myDIV on top of it.
+        To switch, comment out the active block and uncomment the other.
+    -->
+
+    <!-- Option 2: Disco ball intro (commented out)
+    <div class="disco" id="hide">
+        <div class="ceiling"></div>
+        <div class="background"></div>
+        <div class="wrapper">
+            <div class="wrapper-string">
+                <div class="string">
+
+                </div>
+            </div>
+            <button id="invis" onclick="myFunction()">
+
+                <div class="ball">
+
+                </div>
+
+
+            </button>
+
+
+        </div>
+    </div>
+    -->
+
+    <!-- Option 1: Lava Lamp intro (active) -->
+    <div class="lava-lamp" id="hide" onclick="myFunction()">
+        <svg width="0" height="0" style="position:absolute;">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix"
+                        values="1 0 0 0 0
+                                0 1 0 0 0
+                                0 0 1 0 0
+                                0 0 0 22 -9" result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="tv-case">
+            <div class="screen">
+                <div class="backdrop"></div>
+
+                <div class="lava">
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                    <div class="blob"></div>
+                </div>
+
+                <div class="ambient"></div>
+                <div class="texture"></div>
+                <div class="phosphor a"></div>
+                <div class="phosphor b"></div>
+                <div class="sheen"></div>
+                <div class="vignette"></div>
+
+                <main class="content">
+                    <h1>Hello, World<span class="cursor">&nbsp;</span></h1>
+                </main>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="body" id="myDIV" style="display: none;">
+
+        <nav>
+            <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" id="nav1" onclick="closeMenu()">Welcome</a>
+                <a href="#project1" id="nav2" onclick="closeMenu()">Projects</a>
+                <a href="#contact-text" id="nav4" onclick="closeMenu()">Contact</a>
+            </div>
+        </nav>
+
+
+        <main>
+
+            <article id="about">
+                <div class="about-image">
+                    <img src="images/dp2.png" id="dp" alt="Portrait of Sara Dhahir">
+                    <span class="signal-tag" aria-hidden="true">&gt; INCOMING TRANSMISSION_</span>
+                </div>
+                <div class="about-text">
+                    <h1>Welcome! You're at Sara's Portfolio! I am a Back-End Developer! <br> I bring creative
+                        solutions to life!</h1>
+                </div>
+            </article>
+
+            <section id="project1">
+                <div class="project1-text">
+                    <h2>Character Mastersheet</h2>
+                    <p>Very First website that I designed to hold together all the various characters I use across all
+                        the different Roleplaying Tabletop games that I play. I decided instead of a simple character
+                        sheet, which you already make by default, to instead make each layout convey something about the
+                        character and their overall aesthetic.</p>
+                    <div id="skills">
+                        <img src="images/github.svg" alt="GitHub">
+                        <img src="images/css3.svg" alt="CSS3">
+                        <img src="images/html5.svg" alt="HTML5">
+                        <img src="images/java.svg" alt="Java">
+                    </div>
+                </div>
+                <div class="project1-preview">
+                    <a href="https://sanguine-dreams.github.io/MyChars/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/characters.jpg" alt="Character Mastersheet project preview">
+                    </a>
+                    <a href="https://github.com/sanguine-dreams/MyChars" target="_blank" rel="noopener noreferrer">
+                        <button class="retrobtn">Github Repo</button>
+                    </a>
+
+                </div>
+
+
+            </section>
+
+            <section id="project2">
+                <div class="project2-text">
+                    <h2>Garden Landscaping</h2>
+                    <p>A garden landscaping website, created as part of SCT practice. A practice run for minimalist
+                        design and quiet color tones.</p>
+                    <div id="skills">
+                        <img src="images/github.svg" alt="GitHub">
+                        <img src="images/css3.svg" alt="CSS3">
+                        <img src="images/html5.svg" alt="HTML5">
+                        <img src="images/vs-code.svg" alt="VS Code">
+                    </div>
+                </div>
+                <div class="project2-preview">
+                    <a href="https://sanguine-dreams.github.io/LuckyShrub/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/luckyshrub.png" alt="Lucky Shrub garden landscaping project preview">
+                    </a>
+                    <a href="https://github.com/sanguine-dreams/LuckyShrub" target="_blank" rel="noopener noreferrer">
+                        <button class="retrobtn">Github Repo</button>
+                    </a>
+
+                </div>
+
+
+            </section>
+
+            <section id="project3">
+
+
+                <div class="project3-preview">
+                    <a href="https://sanguine-dreams.github.io/calculator/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/calculator.PNG" alt="Calculator project preview">
+                    </a>
+                    <a href="https://github.com/sanguine-dreams/calculator" target="_blank" rel="noopener noreferrer">
+                        <button class="retrobtn">Github Repo</button>
+                    </a>
+                </div>
+
+
+                <div class="project3-text">
+                    <h2>Every Beginner's Mandatory Calculator</h2>
+                    <p>Anybody who has ever coded anything can tell you that you need to make a calculator. Don't ask
+                        questions, just make a calculator. You need it for your coding journey.</p>
+                    <div id="skills">
+                        <img src="images/github.svg" alt="GitHub">
+                        <img src="images/css3.svg" alt="CSS3">
+                        <img src="images/html5.svg" alt="HTML5">
+                        <img src="images/java-script.svg" alt="JavaScript">
+                        <img src="images/vs-code.svg" alt="VS Code">
+                    </div>
+                </div>
+            </section>
+
+            <section id="project4">
+                <div class="project4-preview">
+                    <a href="https://sanguine-dreams.github.io/Umniah/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/umniah.svg" alt="Florist shop project preview">
+                    </a>
+                    <a href="https://github.com/sanguine-dreams/Umniah" target="_blank" rel="noopener noreferrer">
+                        <button class="retrobtn">Github Repo</button>
+                    </a>
+                </div>
+
+                <div class="project4-text">
+                    <h2>Florist Shop</h2>
+                    <p>Flowers and all sorts of flower arrangements for your every occasion! Designed for a local
+                        Florist shop to showcase their artistry and help customers find information.</p>
+                    <div id="skills">
+                        <img src="images/github.svg" alt="GitHub">
+                        <img src="images/css3.svg" alt="CSS3">
+                        <img src="images/html5.svg" alt="HTML5">
+                        <img src="images/adobe-illustrator.svg" alt="Adobe Illustrator">
+                        <img src="images/adobe-photoshop (1).svg" alt="Adobe Photoshop">
+                        <img src="images/vs-code.svg" alt="VS Code">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <h2 id="contact-text">
+                Like what you see? Contact me!
+            </h2>
+            <div id="contact-icons">
+                <a href="https://www.linkedin.com/in/sara-0-dhahir/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin.svg" id="linkedin" alt="LinkedIn">
+                </a>
+
+                <a href="mailto:sara0dhahir.com?subject=Mail from Portfolio!">
+                    <img src="images/gmail.svg" id="gmail" alt="Email">
+                </a>
+
+
+
+                <a href="Sara_Dhahir_2023.pdf" target="_blank" rel="noopener noreferrer">
+                    <img src="images/cv.svg" id="cv" alt="Resume/CV">
+                </a>
+            </div>
+
+
+
+
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>

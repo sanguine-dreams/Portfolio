@@ -1,0 +1,431 @@
+#hide {
+    --bg-deep: #3b1f0e;
+    --bg-mid: #5c2e0f;
+    --lamp-bright: #ff8a1e;
+    --lava-color: #d9660f;
+    background: #241206;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+}
+
+/* the whole "TV" is the lamp: a case + a curved glass screen */
+.tv-case {
+    position: relative;
+    width: min(92vw, 760px);
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    border-radius: clamp(14px, 3vw, 26px);
+    background: transparent;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: clamp(14px, 3vw, 26px);
+    container-type: size;
+    box-shadow:
+        inset 0 0 2cqmin 0.6cqmin rgba(0,0,0,0.18),
+        inset 0 0 2px rgba(0,0,0,0.3);
+}
+
+.backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 30%, var(--bg-mid) 0%, var(--bg-deep) 70%, #2a1608 100%);
+    z-index: 0;
+}
+
+/* ambient highlight */
+.ambient {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+    background: radial-gradient(ellipse at 42% 30%,
+        rgba(255,228,173,0.55) 0%,
+        rgba(255,179,92,0.15) 45%,
+        rgba(255,179,92,0) 100%);
+}
+
+.texture {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,0.08) 0px,
+            rgba(0,0,0,0.08) 3px,
+            transparent 3px,
+            transparent 16px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(0,0,0,0.08) 0px,
+            rgba(0,0,0,0.08) 3px,
+            transparent 3px,
+            transparent 16px
+        );
+    mix-blend-mode: multiply;
+    opacity: 0.28;
+}
+
+/* faint tri-colour phosphor haze, glowing along the grid lines themselves,
+   like light bleeding off an old CRT's RGB shadow mask */
+.phosphor {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.9;
+    filter: blur(1px) saturate(2.2);
+}
+
+.phosphor.a {
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 30, 30, 0.12) 0px,
+            rgba(255, 30, 30, 0.12) 2px,
+            transparent 2px,
+            transparent 16px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(40, 130, 255, 0.12) 0px,
+            rgba(40, 130, 255, 0.12) 2px,
+            transparent 2px,
+            transparent 16px
+        );
+}
+
+.phosphor.b {
+    transform: translate(1.6px, 1.6px);
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 30, 30, 0.12) 0px,
+            rgba(255, 30, 30, 0.12) 2px,
+            transparent 2px,
+            transparent 16px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(40, 130, 255, 0.12) 0px,
+            rgba(40, 130, 255, 0.12) 2px,
+            transparent 2px,
+            transparent 16px
+        );
+}
+
+/* curved-glass sheen, like light catching the lamp's globe */
+.sheen {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    background: linear-gradient(115deg,
+        rgba(255,225,180,0.16) 0%,
+        rgba(255,225,180,0.05) 18%,
+        transparent 38%,
+        transparent 70%,
+        rgba(255,225,180,0.06) 100%);
+}
+
+.vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    box-shadow:
+        inset 0 0 2cqmin 0.6cqmin rgba(0,0,0,0.14),
+        inset 0 0 6cqmin 1.5cqmin rgba(0,0,0,0.11);
+    border-radius: inherit;
+}
+
+/* lava field, confined to the screen */
+.lava {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    filter: url("#goo");
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.blob:nth-child(1){
+    width: 15%; height: 20%; left: 15%; bottom: -20%;
+    background: var(--lava-color);
+    animation: lava-wobble 4s ease-in-out alternate infinite, lava-rise-one ease-in-out 13s infinite;
+}
+.blob:nth-child(2){
+    width: 22%; height: 29%; right: 20%; bottom: -30%;
+    background: var(--lava-color);
+    animation: lava-wobble 5s ease-in-out alternate infinite, lava-rise-two ease-in-out 22s infinite;
+}
+.blob:nth-child(3){
+    width: 12%; height: 15%; left: 45%; bottom: -20%;
+    background: var(--lava-color);
+    animation: lava-wobble 6s ease-in-out alternate infinite, lava-rise-three ease-in-out 16s infinite;
+}
+.blob:nth-child(4){
+    width: 18%; height: 23%; left: 65%; bottom: -22%;
+    background: var(--lava-color);
+    animation: lava-wobble 7s ease-in-out alternate infinite, lava-rise-four ease-in-out 12s infinite;
+}
+.blob:nth-child(5){
+    width: 6%; height: 8%; left: 30%; bottom: -25%;
+    background: var(--lava-color);
+    animation: lava-wobble 9s ease-in-out alternate infinite, lava-rise-five ease-in-out 32s infinite;
+}
+.blob:nth-child(6){
+    width: 4%; height: 5%; right: 35%; bottom: -25%;
+    background: var(--lava-color);
+    animation: lava-wobble 10s ease-in-out alternate infinite, lava-rise-six ease-in-out 12s infinite;
+}
+.blob:nth-child(7){
+    width: 26%; height: 34%; right: 10%; bottom: -35%;
+    background: var(--lava-color);
+    animation: lava-wobble 11s ease-in-out alternate infinite, lava-rise-seven ease-in-out 30s infinite;
+}
+
+@keyframes lava-wobble {
+    50%  { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+    100% { border-radius: 38% 52% 75% 36% / 50% 40% 50% 60%; }
+}
+
+/* travel distances in container-height units, so blobs always cross
+   the full screen regardless of the TV case's actual pixel size */
+@keyframes lava-rise-one   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-95cqh); } }
+@keyframes lava-rise-two   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-80cqh); } }
+@keyframes lava-rise-three { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-100cqh); } }
+@keyframes lava-rise-four  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-88cqh); } }
+@keyframes lava-rise-five  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-105cqh); } }
+@keyframes lava-rise-six   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-98cqh); } }
+@keyframes lava-rise-seven { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-70cqh); } }
+
+/* terminal text */
+.content {
+    position: absolute;
+    inset: 0;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.content h1 {
+    margin: 0;
+    font-family: 'VT323', monospace;
+    font-size: clamp(1.8rem, 8cqw, 4rem);
+    font-weight: 400;
+    color: #ffd48a;
+    text-shadow:
+        0 0 6px rgba(255, 196, 92, 0.9),
+        0 0 18px rgba(255, 138, 30, 0.7),
+        0 0 40px rgba(255, 138, 30, 0.35);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.content h1::before { content: "> "; opacity: 0.75; }
+
+.content h1 .cursor {
+    display: inline-block;
+    width: 0.12em;
+    background: #ffd48a;
+    margin-left: 0.15em;
+    box-shadow: 0 0 8px rgba(255, 196, 92, 0.9);
+    animation: lava-blink 1s steps(1) infinite;
+}
+
+@keyframes lava-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+.content p {
+    margin-top: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    color: var(--lamp-bright);
+    opacity: 0.85;
+}
+
+/* ---- click transition: the TV becomes the site's background ---- */
+
+/* once clicked, #hide stops being a "click to enter" overlay and
+   settles in behind the site as a fixed fullscreen layer */
+#hide.tv-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    cursor: default;
+}
+
+#hide.tv-bg .tv-case {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: unset;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#hide.tv-bg .screen {
+    border-radius: 0;
+}
+
+#hide.tv-bg .content {
+    display: none;
+}
+
+/* the grid/mesh look now lives in the page-wide overlay in front of
+   everything (css/CrtLavaTheme.css's body::before), not back here
+   behind the site's content — so mute this background copy of it */
+#hide.tv-bg .texture,
+#hide.tv-bg .phosphor {
+    opacity: 0;
+}
+
+/* tv glitch: rapid tears, colour flicker and static while the TV
+   "changes channel" from intro to background */
+#hide.glitching .screen {
+    animation: tv-glitch-jump 0.6s steps(1, end) 1;
+}
+
+#hide.glitching .tv-case {
+    animation: tv-glitch-case 0.6s linear 1;
+}
+
+@keyframes tv-glitch-case {
+    0%, 100% { transform: translate(0, 0); }
+    8%  { transform: translate(-1.2%, 0.6%); }
+    16% { transform: translate(1%, -0.8%); }
+    24% { transform: translate(-0.8%, 0); }
+    32% { transform: translate(0.6%, 1%); }
+    40% { transform: translate(-1%, -0.4%); }
+    48% { transform: translate(0, 0); }
+}
+
+@keyframes tv-glitch-jump {
+    0%, 100% {
+        transform: translate(0, 0);
+        filter: none;
+        clip-path: inset(0 0 0 0);
+    }
+    6% {
+        transform: translate(2%, 0);
+        filter: hue-rotate(25deg) saturate(1.6);
+        clip-path: inset(10% 0 60% 0);
+    }
+    14% {
+        transform: translate(-3%, 0);
+        filter: hue-rotate(-20deg) saturate(1.8);
+        clip-path: inset(55% 0 15% 0);
+    }
+    22% {
+        transform: translate(1%, 0) skewX(2deg);
+        filter: invert(0.12) contrast(1.4);
+        clip-path: inset(30% 0 40% 0);
+    }
+    30% {
+        transform: translate(-2%, 0);
+        filter: hue-rotate(40deg);
+        clip-path: inset(0 0 0 0);
+    }
+    38% {
+        transform: translate(2.5%, 0) skewX(-2deg);
+        filter: saturate(2) brightness(1.3);
+        clip-path: inset(65% 0 5% 0);
+    }
+    46% {
+        transform: translate(-1%, 0);
+        filter: hue-rotate(-30deg);
+        clip-path: inset(5% 0 70% 0);
+    }
+    55% {
+        transform: translate(0, 0);
+        filter: contrast(1.6) brightness(0.6);
+        clip-path: inset(0 0 0 0);
+    }
+    68% {
+        transform: translate(1.5%, 0);
+        filter: hue-rotate(15deg);
+        clip-path: inset(40% 0 25% 0);
+    }
+    82% {
+        transform: translate(-0.8%, 0);
+        filter: none;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* flashes of static/noise and RGB fringing on top of the screen while
+   glitching, and a brief scanline roll settling the picture back in */
+#hide.glitching .screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.9) 0px,
+            rgba(255,255,255,0.9) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    opacity: 0;
+    animation: tv-glitch-static 0.6s steps(8, end) 1;
+}
+
+#hide.glitching .screen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(255, 196, 92, 0.5) 50%,
+        transparent 100%
+    );
+    transform: translateY(-100%);
+    animation: tv-glitch-roll 0.6s ease-out 1;
+}
+
+@keyframes tv-glitch-static {
+    0%, 100% { opacity: 0; }
+    10%, 20%, 35%, 50%, 65% { opacity: 0.5; }
+    15%, 25%, 40%, 55%, 70% { opacity: 0.05; }
+}
+
+@keyframes tv-glitch-roll {
+    0%   { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
